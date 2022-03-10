@@ -22,7 +22,7 @@
         <DockPanel Grid.Column="2">
             <TextBlock Text="Намордник" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35"/>
         </DockPanel>
-        <Frame x:Name="frmMain" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="frmMain" Grid.Row="1" Grid.ColumnSpan="2"  NavigationUIVisibility="Hidden"/>
         
     </Grid>
 </Window>

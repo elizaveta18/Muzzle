@@ -27,7 +27,6 @@ namespace Muzzle
         }
 
         
-
         public MainWindow()
         {
             InitializeComponent();

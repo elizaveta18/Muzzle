@@ -24,7 +24,8 @@ namespace Muzzle
         public Main()
         {
             InitializeComponent();
-            listBoxNamordnik.ItemsSource = BaseConnect.baseConnect.Product.ToList();
+            listBoxNamordnik.ItemsSource = BaseConnect.baseConnect.Product.ToList(); //подключать одну таблицу, остальные подкючатся по id
+            //listBoxNamordnik.ItemsSource = BaseConnect.baseConnect.ProductMaterial.ToList();
         }
    
     }

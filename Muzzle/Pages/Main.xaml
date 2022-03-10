@@ -9,15 +9,26 @@
       Title="Main">
     <Page.Resources>
         <DataTemplate x:Key="NamordnikInfo">
-            <StackPanel Orientation="Horizontal" >
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                    <TextBlock Text="{Binding ProductTypeID}" HorizontalAlignment="Center">
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <TextBlock Text="{Binding Title}" HorizontalAlignment="Center">
-                        </TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/Image/picture.png" Width="50" Height="50"/>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Title}"/>
+                        <TextBlock Text=" | "/>
+                        <TextBlock Text="{Binding ProductType.Title}"/>
                     </StackPanel>
-                    </TextBlock>
-                 </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="{Binding ArticleNumber}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Материалы: "/>
+                        <TextBlock Text="{Binding Material.Title}"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <TextBlock Text="Стоимость"/>
+                    <!--<TextBlock Text="{Binding }"/>-->
+                </StackPanel>
             </StackPanel>
         </DataTemplate>
     </Page.Resources>
@@ -28,6 +39,6 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <ListBox Grid.Row="1" Background="white" x:Name="listBoxNamordnik"  ItemTemplate="{StaticResource NamordnikInfo}" HorizontalContentAlignment="Center"></ListBox>
+        <ListBox Grid.Row="1" x:Name="listBoxNamordnik"  ItemTemplate="{StaticResource NamordnikInfo}"></ListBox>
     </Grid>
 </Page>
